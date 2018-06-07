@@ -1,0 +1,122 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "ledgerco",
+        "scope": null,
+        "escapedName": "ledgerco",
+        "name": "ledgerco",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/home/catfromhell/Work/RELEASE_LEDGER/SKY-Wallet"
+    ]
+  ],
+  "_from": "ledgerco@latest",
+  "_id": "ledgerco@1.2.1",
+  "_inCache": true,
+  "_location": "/ledgerco",
+  "_nodeVersion": "6.11.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/ledgerco-1.2.1.tgz_1515166497031_0.20390046783722937"
+  },
+  "_npmUser": {
+    "name": "btchip",
+    "email": "hello@ledger.fr"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ledgerco",
+    "scope": null,
+    "escapedName": "ledgerco",
+    "name": "ledgerco",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/ledgerco/-/ledgerco-1.2.1.tgz",
+  "_shasum": "a1fdefd7aaf5a8857bf9b47887f5465bdcdf0602",
+  "_shrinkwrap": null,
+  "_spec": "ledgerco",
+  "_where": "/home/catfromhell/Work/RELEASE_LEDGER/SKY-Wallet",
+  "author": {
+    "name": "Nicolas Bacca"
+  },
+  "browser": "./lib/index-browser",
+  "bugs": {
+    "url": "https://github.com/LedgerHQ/ledger-node-js-api/issues"
+  },
+  "dependencies": {
+    "node-hid": "0.6.0",
+    "u2f-api": "0.2.7"
+  },
+  "description": "Node API for Ledger Hardware Wallets (HW.1 / Nano / Nano S / Blue)",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "browserify": "^14.5.0",
+    "eslint": "^4.11.0",
+    "eslint-config-prettier": "^2.7.0",
+    "flow-bin": "^0.59.0",
+    "flow-copy-source": "^1.2.1",
+    "flow-typed": "^2.2.3",
+    "prettier": "^1.8.2",
+    "uglify-js": "^3.1.9"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "a1fdefd7aaf5a8857bf9b47887f5465bdcdf0602",
+    "tarball": "https://registry.npmjs.org/ledgerco/-/ledgerco-1.2.1.tgz"
+  },
+  "files": [
+    "lib",
+    "src",
+    "browser",
+    "scripts"
+  ],
+  "gitHead": "355ff3a83432d9d388778385c321d2106e5b5bd1",
+  "homepage": "https://github.com/LedgerHQ/ledger-node-js-api",
+  "keywords": [
+    "Ledger",
+    "Wallet",
+    "HW.1",
+    "Bitcoin",
+    "Ethereum",
+    "Hardware Wallet"
+  ],
+  "license": "Apache-2.0",
+  "main": "./lib/index-node",
+  "maintainers": [
+    {
+      "name": "btchip",
+      "email": "hello@ledger.fr"
+    }
+  ],
+  "name": "ledgerco",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LedgerHQ/ledger-node-js-api.git"
+  },
+  "scripts": {
+    "bootstrap": "flow-typed install -s",
+    "build": "./scripts/build.sh",
+    "flow": "flow src",
+    "lint": "eslint src",
+    "prepare": "npm run build",
+    "prettier": "prettier --write 'src/**/*.js'",
+    "test": "node test/tests-node.js",
+    "watch": "babel src -d lib -w"
+  },
+  "version": "1.2.1"
+}
