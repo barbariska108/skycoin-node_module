@@ -46,7 +46,7 @@ export default class LedgerBtc {
 
   constructor(comm: LedgerComm) {
     this.comm = comm;
-    comm.setScrambleKey("BTC");
+    comm.setScrambleKey("SKY");
   }
 
   getWalletPublicKey_async(
