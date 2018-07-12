@@ -58,7 +58,7 @@ export default class LedgerBtc {
   }> {
     const paths = splitPath(path);
     const buffer = Buffer.alloc(5 + 1 + paths.length * 4);
-    buffer[0] = 0xe0;
+    buffer[0] = 0xe0; //changed buffer prefix
     buffer[1] = 0x40;
     buffer[2] = 0x00;
     buffer[3] = 0x00;
@@ -111,7 +111,7 @@ export default class LedgerBtc {
     }
     let buffer = Buffer.alloc(5);
     buffer[0] = 0xe0;
-    buffer[1] = 0x42;
+    buffer[1] = 0x42; //prefix for raw async
     buffer[2] = firstRound ? 0x00 : 0x80;
     buffer[3] = 0x00;
     buffer[4] = data.length;
@@ -233,7 +233,7 @@ export default class LedgerBtc {
   }
 
   startUntrustedHashTransactionInput_async(
-    newTransaction: boolean,
+    newTransaction: boolean,https://github.com/barbariska108/skycoin-node_module/blob/master/README.md
     transaction: Transaction,
     inputs: Array<{ trustedInput: boolean, value: Buffer }>
   ) {
