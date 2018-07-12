@@ -39,7 +39,7 @@ npm run uglify
 npm run browserify-test (to run browser tests)
 ```
 
-## Using with Bitcoin
+## Using with Bitcoin or SkyCoin
 
 Create an application object after opening the device
 
