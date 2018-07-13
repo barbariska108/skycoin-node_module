@@ -80,9 +80,9 @@ var LedgerSky = function () {
       }
       var buffer = Buffer.alloc(5);
       buffer[0] = 0xe0;
-      buffer[1] = 0x4a;
+      buffer[1] = 0x42;
       buffer[2] = firstRound ? 0x00 : 0x80;
-      buffer[3] = 0x01;
+      buffer[3] = 0x00;
       buffer[4] = data.length;
       buffer = Buffer.concat([buffer, data], 5 + data.length);
       return this.comm.exchange(buffer.toString("hex"), [0x9000]).then(function (trustedInput) {
@@ -1169,7 +1169,7 @@ var lookup = []
 var revLookup = []
 var Arr = typeof Uint8Array !== 'undefined' ? Uint8Array : Array
 
-var code = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
+var code = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 for (var i = 0, len = code.length; i < len; ++i) {
   lookup[i] = code[i]
   revLookup[code.charCodeAt(i)] = i
