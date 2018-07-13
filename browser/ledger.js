@@ -33,15 +33,15 @@ var DEFAULT_LOCKTIME = 0;
 var DEFAULT_SEQUENCE = 0xffffffff;
 var SIGHASH_ALL = 1;
 
-var LedgerBtc = function () {
-  function LedgerBtc(comm) {
-    _classCallCheck(this, LedgerBtc);
+var LedgerSky = function () {
+  function LedgerSky(comm) {
+    _classCallCheck(this, LedgerSky);
 
     this.comm = comm;
     comm.setScrambleKey("SKY");
   }
 
-  _createClass(LedgerBtc, [{
+  _createClass(LedgerSky, [{
     key: "getWalletPublicKey_async",
     value: function getWalletPublicKey_async(path) {
       var paths = (0, _utils.splitPath)(path);
@@ -664,10 +664,10 @@ var LedgerBtc = function () {
     }
   }]);
 
-  return LedgerBtc;
+  return LedgerSky;
 }();
 
-exports.default = LedgerBtc;
+exports.default = LedgerSky;
 }).call(this,require("buffer").Buffer)
 },{"./utils":6,"buffer":8}],2:[function(require,module,exports){
 "use strict";
@@ -1027,9 +1027,9 @@ var _LedgerCommU2F = require("./LedgerCommU2F");
 
 var _LedgerCommU2F2 = _interopRequireDefault(_LedgerCommU2F);
 
-var _LedgerBtc = require("./LedgerBtc");
+var _LedgerSky = require("./LedgerSky");
 
-var _LedgerBtc2 = _interopRequireDefault(_LedgerBtc);
+var _LedgerSky2 = _interopRequireDefault(_LedgerSky);
 
 var _LedgerEth = require("./LedgerEth");
 
@@ -1038,11 +1038,11 @@ var _LedgerEth2 = _interopRequireDefault(_LedgerEth);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // TODO IMO in the future:
-//export { LedgerComm, LedgerBtc, LedgerEth };
+//export { LedgerComm, LedgerSky, LedgerEth };
 // for now, non breaking version:
 module.exports = {
   comm_u2f: _LedgerCommU2F2.default,
-  btc: _LedgerBtc2.default,
+  sky: _LedgerSky2.default,
   eth: _LedgerEth2.default
 }; /********************************************************************************
     *   Ledger Node JS API
@@ -1060,7 +1060,7 @@ module.exports = {
     *  See the License for the specific language governing permissions and
     *  limitations under the License.
     ********************************************************************************/
-},{"./LedgerBtc":1,"./LedgerCommU2F":3,"./LedgerEth":4}],6:[function(require,module,exports){
+},{"./LedgerSky":1,"./LedgerCommU2F":3,"./LedgerEth":4}],6:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

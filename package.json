@@ -23,7 +23,7 @@
     "tmp": "tmp/ledgerco-1.2.1.tgz_1515166497031_0.20390046783722937"
   },
   "_npmUser": {
-    "name": "btchip",
+    "name": "Skyhip",
     "email": "hello@ledger.fr"
   },
   "_npmVersion": "3.10.10",
@@ -97,7 +97,7 @@
   "main": "./lib/index-node",
   "maintainers": [
     {
-      "name": "btchip",
+      "name": "Skyhip",
       "email": "hello@ledger.fr"
     }
   ],

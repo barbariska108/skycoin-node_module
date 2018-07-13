@@ -41,7 +41,7 @@ type Transaction = {
   locktime?: Buffer
 };
 
-export default class LedgerBtc {
+export default class LedgerSky {
   comm: LedgerComm;
 
   constructor(comm: LedgerComm) {
