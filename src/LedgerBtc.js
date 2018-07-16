@@ -41,12 +41,12 @@ type Transaction = {
   locktime?: Buffer
 };
 
-export default class LedgerBtc {
+export default class LedgerSky {
   comm: LedgerComm;
 
   constructor(comm: LedgerComm) {
     this.comm = comm;
-    comm.setScrambleKey("BTC");
+    comm.setScrambleKey("SKY");
   }
 
   getWalletPublicKey_async(

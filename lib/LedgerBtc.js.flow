@@ -26,6 +26,12 @@ const SIGHASH_ALL = 1;
 
 type TransactionInput = {
   prevout: Buffer,
+  prevout: Buffer,
+  prevout: Buffer,
+  script: Buffer,
+  script: Buffer,
+  prevout: Buffer,
+  script: Buffer,
   script: Buffer,
   sequence: Buffer
 };
@@ -41,12 +47,12 @@ type Transaction = {
   locktime?: Buffer
 };
 
-export default class LedgerBtc {
+export default class LedgerSky {
   comm: LedgerComm;
 
   constructor(comm: LedgerComm) {
     this.comm = comm;
-    comm.setScrambleKey("BTC");
+    comm.setScrambleKey("SKY");
   }
 
   getWalletPublicKey_async(

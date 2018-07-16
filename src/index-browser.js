@@ -17,14 +17,14 @@
 //@flow
 
 import LedgerComm from "./LedgerCommU2F";
-import LedgerBtc from "./LedgerBtc";
+import LedgerSky from "./LedgerSky";
 import LedgerEth from "./LedgerEth";
 
 // TODO IMO in the future:
-//export { LedgerComm, LedgerBtc, LedgerEth };
+//export { LedgerComm, LedgerSky, LedgerEth };
 // for now, non breaking version:
 module.exports = {
   comm_u2f: LedgerComm,
-  btc: LedgerBtc,
+  sky: LedgerSky,
   eth: LedgerEth
 };
