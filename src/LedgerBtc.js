@@ -53,7 +53,7 @@ export default class LedgerSky {
     path: string
   ): Promise<{
     publicKey: string,
-    bitcoinAddress: string,
+    skycoinAddress: string,
     chainCode: string
   }> {
     const paths = splitPath(path);
@@ -76,7 +76,7 @@ export default class LedgerSky {
         const publicKey = response
           .slice(1, 1 + publicKeyLength)
           .toString("hex");
-        const bitcoinAddress = response
+        const skycoinAddress = response
           .slice(
             1 + publicKeyLength + 1,
             1 + publicKeyLength + 1 + addressLength
@@ -88,7 +88,7 @@ export default class LedgerSky {
             1 + publicKeyLength + 1 + addressLength + 32
           )
           .toString("hex");
-        return { publicKey, bitcoinAddress, chainCode };
+        return { publicKey, skycoinAddress, chainCode };
       });
   }
 
